@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YKIシステムコンサルティング - 業務システム開発・ITコンサル・AIアプリ開発</title>
-  <meta name="description" content="YKIシステムコンサルティングは、業務システム開発・Web制作・ITコンサルティング・AIモバイルアプリ開発を行うIT企業です。">
+  <title>YKIシステムコンサルティング - 業務システム開発・ITコンサル</title>
+  <meta name="description" content="YKIシステムコンサルティング合同会社。情報システムの企画・開発、ITコンサルティング、Webサイト・アプリ開発、バックオフィス業務支援、研修・セミナーに対応。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -56,14 +56,14 @@
       height: 64px;
     }
     .nav-logo {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 900;
       color: var(--text);
       text-decoration: none;
       letter-spacing: -0.3px;
     }
     .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
     .nav-links a {
       font-size: 13px;
       font-weight: 500;
@@ -134,7 +134,7 @@
     .section-desc {
       font-size: 15px;
       color: var(--text-secondary);
-      max-width: 600px;
+      max-width: 640px;
       margin-bottom: 48px;
     }
 
@@ -143,13 +143,19 @@
     .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .service-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
     .service-card {
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 32px 28px;
+      padding: 30px 26px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .service-card:hover {
@@ -157,18 +163,18 @@
       box-shadow: 0 12px 40px rgba(0,0,0,0.06);
     }
     .service-icon {
-      width: 52px;
-      height: 52px;
+      width: 50px;
+      height: 50px;
       background: var(--blue-gradient);
       border-radius: 13px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 24px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .service-card h3 {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
       margin-bottom: 10px;
     }
@@ -176,7 +182,15 @@
       font-size: 13px;
       color: var(--text-secondary);
       line-height: 1.9;
+      margin-bottom: 12px;
     }
+    .service-examples {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      line-height: 1.8;
+      padding-left: 16px;
+    }
+    .service-examples li { margin-bottom: 2px; }
 
     /* ─── プロダクト ─── */
     .product-grid {
@@ -269,11 +283,23 @@
       padding: 14px 16px 14px 0;
       white-space: nowrap;
       width: 110px;
+      vertical-align: top;
     }
     .info-table td {
       font-size: 14px;
       color: var(--text);
       padding: 14px 0;
+    }
+    .biz-list {
+      list-style: none;
+      padding: 0;
+    }
+    .biz-list li {
+      font-size: 14px;
+      padding: 2px 0;
+    }
+    .biz-list li::before {
+      content: '・';
     }
 
     /* ─── コンタクト ─── */
@@ -331,6 +357,7 @@
       .hero h1 { font-size: 26px; }
       .hero { padding: 130px 20px 70px; }
       .service-grid { grid-template-columns: 1fr; }
+      .service-grid-2 { grid-template-columns: 1fr; }
       .product-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
       .nav-links { display: none; }
@@ -345,7 +372,7 @@
   <div class="nav-inner">
     <a href="#" class="nav-logo">YKI<span>システムコンサルティング</span></a>
     <ul class="nav-links">
-      <li><a href="#services">サービス</a></li>
+      <li><a href="#services">サービス内容</a></li>
       <li><a href="#products">プロダクト</a></li>
       <li><a href="#about">会社概要</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
@@ -357,45 +384,84 @@
 <div class="hero">
   <div class="hero-content">
     <h1>ITの力で、<br><em>あなたのビジネス課題を<br>まるごと解決。</em></h1>
-    <p>業務システム開発・Web制作・ITコンサルティングに加え、<br>AI技術を活用したモバイルアプリ開発まで。<br>YKIシステムコンサルティングにお任せください。</p>
+    <p>業務システム開発・Web制作・ITコンサルティングに対応。</p>
   </div>
 </div>
 
-<!-- ─── サービス ─── -->
+<!-- ─── サービス内容 ─── -->
 <section id="services" class="services">
   <div class="section-inner">
     <div class="section-label">Services</div>
-    <h2 class="section-title">サービス</h2>
-    <p class="section-desc">お客様のビジネス課題に合わせて、最適なITソリューションを提供いたします。</p>
+    <h2 class="section-title">サービス内容</h2>
+    <p class="section-desc">お客様の業務課題を徹底的にヒアリングし、最適なITソリューションをワンストップで提供いたします。</p>
 
     <div class="service-grid">
       <div class="service-card">
         <div class="service-icon">⚙️</div>
-        <h3>業務システム開発</h3>
-        <p>お客様の業務フローに最適化されたシステムを設計・開発します。既存システムの改修・リプレイスにも対応。業務効率化とコスト削減を実現します。</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3>Web制作</h3>
-        <p>コーポレートサイト、ECサイト、ランディングページなど、目的に合わせたWebサイトを制作。レスポンシブ対応・SEO対策も標準で提供します。</p>
+        <h3>情報システムの企画・開発</h3>
+        <p>お客様の業務プロセスを徹底的にヒアリングし、課題抽出から要件定義、設計・開発・運用保守までワンストップでサポートします。最新のWeb技術やクラウドサービス（AWS、Azure、Google Cloud等）を活用したシステム開発や、既存システムのリプレイス・DX推進もご提案可能です。</p>
+        <ul class="service-examples">
+          <li>受発注管理システムのクラウド移行によるコスト削減</li>
+          <li>ECサイトのフルスクラッチ開発・運用</li>
+          <li>在庫管理、勤怠管理など部門業務の自動化ツール開発</li>
+        </ul>
       </div>
 
       <div class="service-card">
         <div class="service-icon">💼</div>
         <h3>ITコンサルティング</h3>
-        <p>IT戦略の策定からシステム導入支援、運用改善まで幅広くサポート。DX推進・クラウド移行・セキュリティ対策などの課題をワンストップで解決します。</p>
+        <p>IT導入や業務改善の課題をヒアリングし、最適なシステム選定・運用体制の構築をご提案します。セキュリティ診断や情報漏えい対策、BCP（事業継続計画）の策定支援も対応可能です。</p>
+        <ul class="service-examples">
+          <li>業務プロセスの可視化・業務効率化提案</li>
+          <li>RPA導入による定型業務の自動化支援</li>
+          <li>サイバー攻撃対策や社内情報管理体制の整備コンサル</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Webサイト・アプリ開発</h3>
+        <p>企業ホームページ、業務Webアプリケーション、スマートフォンアプリの企画・制作・運用まで幅広く対応します。UI/UXデザインからSEO、集客、サーバー運用までトータルサポート。</p>
+        <ul class="service-examples">
+          <li>コーポレートサイトや採用サイトの新規立ち上げ・リニューアル</li>
+          <li>社内ポータルサイトの構築</li>
+          <li>顧客管理・予約管理アプリの開発</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-grid-2">
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>バックオフィス業務支援</h3>
+        <p>経理・財務・労務などのバックオフィス業務を、ITシステムによる効率化や自動化でサポートします。ペーパーレス化やクラウド会計ソフトの導入支援もご相談ください。</p>
+        <ul class="service-examples">
+          <li>クラウド会計システム（freee、マネーフォワード等）の導入・運用</li>
+          <li>勤怠・給与計算の自動化ツール構築</li>
+          <li>電子申請・電子契約サービスの活用アドバイス</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>研修・セミナー</h3>
+        <p>ITリテラシー向上やシステム導入に向けた各種研修・セミナーを企画・運営します。現場ニーズに合わせたカスタマイズが可能です。</p>
+        <ul class="service-examples">
+          <li>社員向けクラウドサービス活用講座</li>
+          <li>情報セキュリティ・DX推進研修</li>
+          <li>新入社員向けIT基礎研修（Word、Excel、メール等）</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── プロダクト ─── -->
+<!-- ─── 自社プロダクト ─── -->
 <section id="products">
   <div class="section-inner">
     <div class="section-label">Products</div>
     <h2 class="section-title">自社プロダクト</h2>
-    <p class="section-desc">受託開発で培った技術力を活かし、AI技術を搭載した自社アプリも展開しています。</p>
+    <p class="section-desc">受託開発で培った技術力とAI技術を融合し、自社ブランド「YKIソフトウェア」でアプリを展開しています。</p>
 
     <div class="product-grid">
       <div class="product-card">
@@ -433,29 +499,43 @@
   <div class="section-inner">
     <div class="section-label">About</div>
     <h2 class="section-title">会社概要</h2>
-    <p class="section-desc"></p>
 
     <div class="about-grid">
       <div class="about-text">
-        <p>YKIシステムコンサルティングは、業務システム開発・Web制作・ITコンサルティングを中心に、お客様のビジネス課題を包括的に解決するIT企業です。</p>
+        <p>YKIシステムコンサルティング合同会社は、情報システムの企画・開発からITコンサルティング、Webサイト・アプリ開発、バックオフィス業務支援まで、お客様のビジネス課題を包括的に解決するIT企業です。</p>
         <p>近年は、Google Gemini をはじめとする最先端のAI技術を活用したモバイルアプリケーション開発にも事業領域を拡大し、「YKIソフトウェア」ブランドでアプリを展開しています。</p>
       </div>
       <table class="info-table">
         <tr>
           <th>会社名</th>
-          <td>YKIシステムコンサルティング</td>
+          <td>YKIシステムコンサルティング合同会社</td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td>〒150-0044<br>東京都渋谷区円山町5番3号<br>MIEUX渋谷ビル8階</td>
+        </tr>
+        <tr>
+          <th>代表者</th>
+          <td>沼田 憂士</td>
+        </tr>
+        <tr>
+          <th>設立</th>
+          <td>2025年6月</td>
         </tr>
         <tr>
           <th>事業内容</th>
-          <td>業務システム開発<br>Web制作<br>ITコンサルティング<br>AIモバイルアプリ開発・運営</td>
+          <td>
+            <ul class="biz-list">
+              <li>情報システムの企画、設計、開発、運用、保守及びコンサルティング</li>
+              <li>経理、財務、労務等のバックオフィス業務コンサルティング</li>
+              <li>Webサイト・アプリの企画、制作、運営</li>
+              <li>各種研修・セミナーの企画運営</li>
+            </ul>
+          </td>
         </tr>
         <tr>
           <th>アプリ部門</th>
           <td>YKIソフトウェア</td>
-        </tr>
-        <tr>
-          <th>主要技術</th>
-          <td>Java / Python / React Native / Expo<br>Google Gemini AI / クラウド基盤</td>
         </tr>
         <tr>
           <th>連絡先</th>
@@ -499,7 +579,7 @@
 
 <!-- ─── フッター ─── -->
 <footer>
-  <p>&copy; 2026 YKIシステムコンサルティング All Rights Reserved. | <a href="https://ykisoftware.github.io/ai-satei-pro-privacy/">プライバシーポリシー</a></p>
+  <p>&copy; 2025 YKIシステムコンサルティング合同会社 All Rights Reserved. | <a href="https://ykisoftware.github.io/ai-satei-pro-privacy/">プライバシーポリシー</a></p>
 </footer>
 
 </body>
