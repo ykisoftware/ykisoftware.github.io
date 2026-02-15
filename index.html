@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YKIソフトウェア - AIで暮らしを便利に</title>
-  <meta name="description" content="YKIソフトウェアは、AI技術を活用したモバイルアプリケーションを開発するソフトウェア企業です。">
+  <title>YKIシステムコンサルティング - 業務システム開発・ITコンサル・AIアプリ開発</title>
+  <meta name="description" content="YKIシステムコンサルティングは、業務システム開発・Web制作・ITコンサルティング・AIモバイルアプリ開発を行うIT企業です。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -15,11 +15,14 @@
       --text: #1a1a1a;
       --text-secondary: #5a5a5a;
       --text-tertiary: #8a8a8a;
-      --accent: #8b7355;
-      --accent-light: #c4a35a;
+      --accent: #2c5282;
+      --accent-light: #4299e1;
+      --accent-warm: #8b7355;
+      --gold: #c4a35a;
       --border: #e8e6e0;
+      --blue-gradient: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%);
+      --dark-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
       --gold-gradient: linear-gradient(135deg, #c4a35a 0%, #8b7355 100%);
-      --dark-gradient: linear-gradient(135deg, #1a1a1a 0%, #2a2018 100%);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -53,14 +56,14 @@
       height: 64px;
     }
     .nav-logo {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 900;
       color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.3px;
     }
     .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
     .nav-links a {
       font-size: 13px;
       font-weight: 500;
@@ -85,39 +88,28 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(ellipse at 30% 50%, rgba(196, 163, 90, 0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 30% 50%, rgba(66, 153, 225, 0.08) 0%, transparent 60%);
     }
-    .hero-content { position: relative; max-width: 720px; margin: 0 auto; }
-    .hero-badge {
-      display: inline-block;
-      background: rgba(196, 163, 90, 0.15);
-      color: var(--accent-light);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 16px;
-      border-radius: 20px;
-      margin-bottom: 24px;
-      letter-spacing: 1px;
-    }
+    .hero-content { position: relative; max-width: 760px; margin: 0 auto; }
     .hero h1 {
-      font-size: 42px;
+      font-size: 40px;
       font-weight: 900;
       color: #fff;
-      line-height: 1.3;
+      line-height: 1.4;
       letter-spacing: -1px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
     .hero h1 em {
       font-style: normal;
-      background: var(--gold-gradient);
+      background: linear-gradient(135deg, #4299e1, #63b3ed);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .hero p {
       font-size: 16px;
-      color: #a0a0a0;
-      max-width: 540px;
+      color: #a0b0c0;
+      max-width: 580px;
       margin: 0 auto;
       line-height: 1.9;
     }
@@ -142,19 +134,58 @@
     .section-desc {
       font-size: 15px;
       color: var(--text-secondary);
-      max-width: 560px;
+      max-width: 600px;
       margin-bottom: 48px;
     }
 
+    /* ─── サービス ─── */
+    .services { background: var(--surface); }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    }
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--blue-gradient);
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+    .service-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+    }
+
     /* ─── プロダクト ─── */
-    .products { background: var(--surface); }
     .product-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
     .product-card {
-      background: var(--bg);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 36px 32px;
@@ -196,7 +227,24 @@
     .badge-live { background: #e8f5e9; color: #2d7a4f; }
     .badge-dev { background: #fff3e0; color: #b37a1a; }
 
+    /* ─── ミッション ─── */
+    .mission {
+      background: var(--dark-gradient);
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .mission .section-label { color: var(--accent-light); }
+    .mission .section-title { color: #fff; }
+    .mission-text {
+      font-size: 16px;
+      color: #a0b0c0;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 2;
+    }
+
     /* ─── 会社概要 ─── */
+    .about { background: var(--surface); }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -220,7 +268,7 @@
       color: var(--text-tertiary);
       padding: 14px 16px 14px 0;
       white-space: nowrap;
-      width: 100px;
+      width: 110px;
     }
     .info-table td {
       font-size: 14px;
@@ -228,26 +276,9 @@
       padding: 14px 0;
     }
 
-    /* ─── ミッション ─── */
-    .mission {
-      background: var(--dark-gradient);
-      text-align: center;
-      padding: 80px 24px;
-    }
-    .mission .section-label { color: var(--accent-light); }
-    .mission .section-title { color: #fff; }
-    .mission-text {
-      font-size: 16px;
-      color: #a0a0a0;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 2;
-    }
-
     /* ─── コンタクト ─── */
-    .contact { background: var(--surface); }
     .contact-card {
-      background: var(--bg);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 40px;
@@ -275,7 +306,7 @@
     .contact-icon {
       width: 36px;
       height: 36px;
-      background: rgba(139, 115, 85, 0.1);
+      background: rgba(44, 82, 130, 0.08);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -297,8 +328,9 @@
 
     /* ─── レスポンシブ ─── */
     @media (max-width: 768px) {
-      .hero h1 { font-size: 28px; }
+      .hero h1 { font-size: 26px; }
       .hero { padding: 130px 20px 70px; }
+      .service-grid { grid-template-columns: 1fr; }
       .product-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 32px; }
       .nav-links { display: none; }
@@ -311,8 +343,9 @@
 <!-- ─── ナビゲーション ─── -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">YKI<span>ソフトウェア</span></a>
+    <a href="#" class="nav-logo">YKI<span>システムコンサルティング</span></a>
     <ul class="nav-links">
+      <li><a href="#services">サービス</a></li>
       <li><a href="#products">プロダクト</a></li>
       <li><a href="#about">会社概要</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
@@ -323,31 +356,59 @@
 <!-- ─── ヒーロー ─── -->
 <div class="hero">
   <div class="hero-content">
-    <div class="hero-badge">SINCE 2026</div>
-    <h1>AIの力で、<br><em>暮らしを、もっと便利に。</em></h1>
-    <p>YKIソフトウェアは、最新のAI技術を活用し、<br>日常をスマートにするモバイルアプリを開発しています。</p>
+    <h1>ITの力で、<br><em>あなたのビジネス課題を<br>まるごと解決。</em></h1>
+    <p>業務システム開発・Web制作・ITコンサルティングに加え、<br>AI技術を活用したモバイルアプリ開発まで。<br>YKIシステムコンサルティングにお任せください。</p>
   </div>
 </div>
 
+<!-- ─── サービス ─── -->
+<section id="services" class="services">
+  <div class="section-inner">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">サービス</h2>
+    <p class="section-desc">お客様のビジネス課題に合わせて、最適なITソリューションを提供いたします。</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>業務システム開発</h3>
+        <p>お客様の業務フローに最適化されたシステムを設計・開発します。既存システムの改修・リプレイスにも対応。業務効率化とコスト削減を実現します。</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Web制作</h3>
+        <p>コーポレートサイト、ECサイト、ランディングページなど、目的に合わせたWebサイトを制作。レスポンシブ対応・SEO対策も標準で提供します。</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💼</div>
+        <h3>ITコンサルティング</h3>
+        <p>IT戦略の策定からシステム導入支援、運用改善まで幅広くサポート。DX推進・クラウド移行・セキュリティ対策などの課題をワンストップで解決します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── プロダクト ─── -->
-<section id="products" class="products">
+<section id="products">
   <div class="section-inner">
     <div class="section-label">Products</div>
-    <h2 class="section-title">プロダクト</h2>
-    <p class="section-desc">AI技術を活用した、使いやすく高品質なアプリケーションを提供しています。</p>
+    <h2 class="section-title">自社プロダクト</h2>
+    <p class="section-desc">受託開発で培った技術力を活かし、AI技術を搭載した自社アプリも展開しています。</p>
 
     <div class="product-grid">
       <div class="product-card">
         <div class="product-icon">🚗</div>
         <h3>AI査定プロ - クルマ買取価格予測</h3>
-        <p>Google Gemini AIを搭載し、車種・年式・走行距離から中古車の買取価格を瞬時に予測。市場トレンド分析、最適な売却タイミングのアドバイスも提供します。</p>
+        <p>Google Gemini AIを搭載した中古車買取価格予測アプリ。車種・年式・走行距離を入力するだけで、プロレベルの査定結果と市場分析を瞬時に提供します。</p>
         <span class="product-badge badge-live">● Google Play 公開中</span>
       </div>
 
       <div class="product-card">
         <div class="product-icon">💡</div>
         <h3>Coming Soon</h3>
-        <p>AI技術を活用した新しいアプリケーションを開発中です。暮らしをもっと便利にするサービスを、順次リリースしていきます。</p>
+        <p>AI技術を活用した新しいアプリケーションを開発中です。受託開発とAIの知見を組み合わせ、社会に価値あるサービスを順次リリースしていきます。</p>
         <span class="product-badge badge-dev">● 開発中</span>
       </div>
     </div>
@@ -358,43 +419,43 @@
 <section class="mission">
   <div class="section-inner">
     <div class="section-label">Mission</div>
-    <h2 class="section-title">テクノロジーを、すべての人に。</h2>
+    <h2 class="section-title">テクノロジーで、ビジネスをもっと前へ。</h2>
     <p class="mission-text">
-      私たちは、高度なAI技術を誰でも簡単に使えるアプリケーションに落とし込み、<br>
-      日常の意思決定をサポートすることを使命としています。<br>
-      複雑なテクノロジーを、シンプルで美しい体験に。
+      業務システム開発・ITコンサルティングで培った確かな技術力と、<br>
+      最先端のAI技術を融合させ、お客様のビジネスと社会に貢献します。<br>
+      課題解決のパートナーとして、共に成長していきます。
     </p>
   </div>
 </section>
 
 <!-- ─── 会社概要 ─── -->
-<section id="about">
+<section id="about" class="about">
   <div class="section-inner">
     <div class="section-label">About</div>
     <h2 class="section-title">会社概要</h2>
-    <p class="section-desc">AIモバイルアプリケーション開発を中心に事業を展開しています。</p>
+    <p class="section-desc"></p>
 
     <div class="about-grid">
       <div class="about-text">
-        <p>YKIソフトウェアは、Google Gemini をはじめとする最先端のAI技術を活用し、ユーザーにとって価値のあるモバイルアプリケーションを企画・開発・運営しています。</p>
-        <p>「テクノロジーの民主化」をテーマに、専門知識がなくても高度な分析や予測が手軽に利用できるアプリを提供しています。</p>
+        <p>YKIシステムコンサルティングは、業務システム開発・Web制作・ITコンサルティングを中心に、お客様のビジネス課題を包括的に解決するIT企業です。</p>
+        <p>近年は、Google Gemini をはじめとする最先端のAI技術を活用したモバイルアプリケーション開発にも事業領域を拡大し、「YKIソフトウェア」ブランドでアプリを展開しています。</p>
       </div>
       <table class="info-table">
         <tr>
           <th>会社名</th>
-          <td>YKIソフトウェア</td>
-        </tr>
-        <tr>
-          <th>設立</th>
-          <td>2026年</td>
+          <td>YKIシステムコンサルティング</td>
         </tr>
         <tr>
           <th>事業内容</th>
-          <td>AIモバイルアプリケーションの企画・開発・運営</td>
+          <td>業務システム開発<br>Web制作<br>ITコンサルティング<br>AIモバイルアプリ開発・運営</td>
+        </tr>
+        <tr>
+          <th>アプリ部門</th>
+          <td>YKIソフトウェア</td>
         </tr>
         <tr>
           <th>主要技術</th>
-          <td>React Native / Expo / Google Gemini AI</td>
+          <td>Java / Python / React Native / Expo<br>Google Gemini AI / クラウド基盤</td>
         </tr>
         <tr>
           <th>連絡先</th>
@@ -406,11 +467,11 @@
 </section>
 
 <!-- ─── コンタクト ─── -->
-<section id="contact" class="contact">
+<section id="contact">
   <div class="section-inner">
     <div class="section-label">Contact</div>
     <h2 class="section-title">お問い合わせ</h2>
-    <p class="section-desc">アプリに関するご質問・ご要望はお気軽にご連絡ください。</p>
+    <p class="section-desc">システム開発・ITコンサルティング・アプリに関するご相談はお気軽にどうぞ。</p>
 
     <div class="contact-card">
       <h3>連絡先</h3>
@@ -438,7 +499,7 @@
 
 <!-- ─── フッター ─── -->
 <footer>
-  <p>&copy; 2026 YKIソフトウェア All Rights Reserved. | <a href="https://ykisoftware.github.io/ai-satei-pro-privacy/">プライバシーポリシー</a></p>
+  <p>&copy; 2026 YKIシステムコンサルティング All Rights Reserved. | <a href="https://ykisoftware.github.io/ai-satei-pro-privacy/">プライバシーポリシー</a></p>
 </footer>
 
 </body>
